@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="parta.css">
-    <script src="parta.js"></script>
+    <link rel="stylesheet" href="currency.css">
+    <script src="currency.js" defer></script>
     <title>Midterm Project - Currency Converter</title>
 </head>
 <body>
@@ -23,29 +23,29 @@
             </tr>
             <tr>
                 <td>
-                    <select name="from_currency" id="from_currency" onchange="displayUnits(this.value); convertImperial(); convertMetric();">
+                    <select name="from_currency" id="from_currency">
                         <option value="none">Please select</option>
-                        <option value="usd">USD (US Dollar)</option>
-                        <option value="cad">CAD (Canadian Dollar)</option>
-                        <option value="eur">EUR (Euro)</option>
-                        <option value="btc">BTC (Bitcoin)</option>
-                        <option value="eth">ETH (Ethereum)</option>
+                        <option value="USD">USD (US Dollar)</option>
+                        <option value="CAD">CAD (Canadian Dollar)</option>
+                        <option value="EUR">EUR (Euro)</option>
+                        <option value="BTC">BTC (Bitcoin)</option>
+                        <option value="ETH">ETH (Ethereum)</option>
                     </select>
                 </td>
                 <td>
-                    <select name="to_currency" id="to_currency" onchange="displayUnits(this.value); convertImperial(); convertMetric();">
+                    <select name="to_currency" id="to_currency">
                         <option value="none">Please select</option>
-                        <option value="usd">USD (US Dollar)</option>
-                        <option value="cad">CAD (Canadian Dollar)</option>
-                        <option value="eur">EUR (Euro)</option>
-                        <option value="btc">BTC (Bitcoin)</option>
-                        <option value="eth">ETH (Ethereum)</option>
+                        <option value="USD">USD (US Dollar)</option>
+                        <option value="CAD">CAD (Canadian Dollar)</option>
+                        <option value="EUR">EUR (Euro)</option>
+                        <option value="BTC">BTC (Bitcoin)</option>
+                        <option value="ETH">ETH (Ethereum)</option>
                     </select>
                 </td>
             </tr>
             <tr>
-                <td><input type="number" min="0" value="0" id="from_value" onchange="convertImperial();"></td>
-                <td><input type="number" min="0" value="0" id="to_value" onchange="convertMetric();"></td>
+                <td><input type="number" min="0" value="0" id="from_value"></td>
+                <td><input type="number" min="0" value="0" id="to_value"></td>
             </tr>
         </table>
         <div>Conversion Ratio</div>
