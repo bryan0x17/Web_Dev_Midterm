@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parta.css">
+    <script src="parta.js"></script>
+    <title>Midterm Project - Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <div class="subtitle">Convert between 5 of the world's most popular currencies</div>
+    <div class="form">
+        <table>
+            <tr>
+                <td>
+                    <label for="from_currency">Convert from:</label>
+                </td>
+                <td>
+                    <label for="to_currency">Convert to:</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="from_currency" id="from_currency" onchange="displayUnits(this.value); convertImperial(); convertMetric();">
+                        <option value="none">Please select</option>
+                        <option value="usd">USD (US Dollar)</option>
+                        <option value="cad">CAD (Canadian Dollar)</option>
+                        <option value="eur">EUR (Euro)</option>
+                        <option value="btc">BTC (Bitcoin)</option>
+                        <option value="eth">ETH (Ethereum)</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="to_currency" id="to_currency" onchange="displayUnits(this.value); convertImperial(); convertMetric();">
+                        <option value="none">Please select</option>
+                        <option value="usd">USD (US Dollar)</option>
+                        <option value="cad">CAD (Canadian Dollar)</option>
+                        <option value="eur">EUR (Euro)</option>
+                        <option value="btc">BTC (Bitcoin)</option>
+                        <option value="eth">ETH (Ethereum)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="number" min="0" value="0" id="from_value" onchange="convertImperial();"></td>
+                <td><input type="number" min="0" value="0" id="to_value" onchange="convertMetric();"></td>
+            </tr>
+        </table>
+        <div>Conversion Ratio</div>
+        <div id="ratio_node"></div>
+    </div>
+</body>
+</html>
