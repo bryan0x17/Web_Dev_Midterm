@@ -33,9 +33,18 @@ header img {
 }
 
 #slides {
-    width: 720px;
+    width: 960px;
     height: 480px;
     overflow: hidden;
     object-fit: cover;
+    transition: opacity 1s;
 }
 
+#slides.fade {
+    opacity: 0;
+}
+
+#slideCaption {
+    text-align: center;
+    font-family: 'Akaya Kanadaka', cursive;
+}
