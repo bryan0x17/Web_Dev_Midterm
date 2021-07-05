@@ -9,13 +9,13 @@ let ratioNode;
 
 // Declare the rates
 // Use the USD rate for every currency - all other conversions can be calculated using this rate
-// Rates are current as on 2021-06-25
+// Rates are current as on 2021-07-05
 // This is the amount of currency that can be purchased with 1 USD
 let USD = 1;
 let EUR = 0.84;
 let CAD = 1.23;
-let BTC = 0.00003100;
-let ETH = 0.00054198;
+let BTC = 0.00002939;
+let ETH = 0.00044763;
 
 // Start function to get nodes and register event listeners after the window loads
 function start() {
