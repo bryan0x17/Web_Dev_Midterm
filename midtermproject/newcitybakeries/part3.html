@@ -16,7 +16,7 @@
         <div>403-555-7625</div>
     </header>
     <h3>Your Details</h3>
-    <form>
+    <form id="form">
     <table id="information">
         <tr>
             <td>
@@ -47,7 +47,7 @@
                 <label for="postCode">Postal Code</label>
             </td>
             <td>
-                <input type="text" name="postCode" id="postCode" pattern="[A-Z][0-9][A-Z] [A-Z][0-9][A-Z]" placeholder="A1A A1A" required>
+                <input type="text" name="postCode" id="postCode" pattern="[A-Z][0-9][A-Z][0-9][A-Z][0-9]" placeholder="A1A 1A1" required>
             </td>
         </tr>
         <tr>
@@ -90,7 +90,7 @@
                 <input type="number" id="width" name="width" value="30" min="30" max="45">
             </td>
         </tr>
-        <tr id="roundCakeOptions">
+        <tr id="roundCakeOptions" class="hidden">
             <td>
                 <label for="radius">Radius (in cm)</label>
                 <input type="number" id="radius" name="radius" value="15" min="15" max="30">
@@ -107,7 +107,7 @@
     <table>
         <tr>
             <td>
-                <label for="icing">Cream Cheese icing</label>
+                <label for="icing">Cream Cheese icing $5</label>
             </td>
             <td>
                 <input type="checkbox" name="icing" id="icing">
@@ -115,7 +115,7 @@
         </tr>
         <tr>
             <td>
-                <label for="topping">Fruit and Almonds topping</label>
+                <label for="topping">Fruit and Almonds topping $7</label>
             </td>
             <td>
                 <input type="checkbox" name="topping" id="topping">
@@ -123,7 +123,7 @@
         </tr>
         <tr>
             <td>
-                <label for="filling">Fruit jam filling between layers</label>
+                <label for="filling">Fruit jam filling between layers $4</label>
             </td>
             <td>
                 <input type="checkbox" name="filling" id="filling">
@@ -138,20 +138,34 @@
 <div id="orderConfirmation" class="hidden">
     <h3>Order Confirmation</h3>
     <div id="orderConDetails">
-        <p id="orderConName"></p>
-        <p id="orderConAddress"></p>
-        <p id="orderConPost"></p>
-        <p id="orderConNum"></p>
-        <p id="orderConEmail"></p>
+        <div id="orderConName"></div>
+        <div id="orderConAddress"></div>
+        <div id="orderConPost"></div>
+        <div id="orderConNum"></div>
+        <div id="orderConEmail"></div>
     </div>
-    <h5>Your Order:</h5>
-    <div id="oderConTotals">
-        <p id="orderConCake"></p>
-        <p id="orderConIcing"></p>
-        <p id="orderConTopping"></p>
-        <p id="orderConFilling"></p>
-        <p id="orderConTotal"></p>
-    </div>
-</div>
+    <h4>Your Order:</h4>
+    <table id="oderConTotals">
+        <tr>
+            <td id="orderConCake"></td>
+            <td id="orderConCakeCost"></td>
+        </tr>
+        <tr id="orderConIcing">
+            <td>Cream Cheese icing:</td>
+            <td>$5</td>
+        </tr>
+        <tr id="orderConTopping">
+            <td>Fruit and Almonds topping:</td>
+            <td>$7</td>
+        </tr>
+        <tr id="orderConFilling">
+            <td>Fruit jam filling between layers:</td>
+            <td>$4</td>
+        </tr>
+        <tr>
+            <td>Total:</td>
+            <td id="orderConTotal"></td>
+        </tr>
+    </table>
 </body>
 </html>

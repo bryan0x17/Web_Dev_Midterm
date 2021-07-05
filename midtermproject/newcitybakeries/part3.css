@@ -49,5 +49,10 @@ h3 {
 
 #reset {
     border-style: none;
+    background-color: rgb(248, 220, 225);
+}
+
+#orderConfirmation {
+    margin-bottom: 40px;
 }
 
