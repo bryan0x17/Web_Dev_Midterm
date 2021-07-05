@@ -6,9 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midterm Project Part 3</title>
     <link rel="stylesheet" href="part3.css">
-    <script src="part3.js"></script>
+    <script src="part3.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1>New City Bakeries</h1>
+        <div>2445 45 ST NW</div>
+        <div>Calgary, Alberta</div>
+        <div>403-555-7625</div>
+    </header>
+    <table id="information">
+        <tr>
+            <td>
+                <label for="first-name">First Name</label>
+            </td>
+            <td>
+                <input type="text" name="first-name" id="first-name" pattern="[a-zA-Z- ]+" maxlength="25" required autofocus>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="last-name">Last Name</label>
+            </td>
+            <td>
+                <input type="text" name="last-name" id="last-name" pattern="[a-zA-Z- ]+" maxlength="25" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="address">Street Address</label>
+            </td>
+            <td>
+                <input type="text" id="address" name="address" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="post-code">Postal Code</label>
+            </td>
+            <td>
+                <input type="text" name="post-code" id="post-code" pattern="[A-Z][0-9][A-Z] [A-Z][0-9][A-Z]" placeholder="A1A A1A" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="phone">Contact Phone Number</label>
+            </td>
+            <td>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="403-555-1010" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email Address</label>
+            </td>
+            <td>
+                <input type="email" id="email" name="email" title="johndoe@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="johndoe@hotmail.com" required>
+            </td>
+        </tr>
+    </table>
+    <h3>Cakes</h3>
+    <table class="menuItems">
+        <tr>
+            <td>
+                <label for="sheetCake">Sheet Cake</label>
+                <input type="radio" id="sheetCake" name="cakeType" value="sheet" checked>
+            </td>
+            <td>
+                <label for="roundCake">Round Cake</label>
+                <input type="radio" id="roundCake" name="cakeType" value="round">
+            </td>
+        </tr>
+        <tr id="sheetCakeOptions">
+            <td>
+                <label for="length">Length (in cm)</label>
+                <input type="number" id="length" name="length" value="30" min="30" max="60">
+                
+            </td>
+            <td>
+                <label for="width">Width (in cm)</label>
+                <input type="number" id="width" name="width" value="30" min="30" max="45">
+            </td>
+        </tr>
+        <tr id="roundCakeOptions">
+            <td>
+                <label for="radius">Radius (in cm)</label>
+                <input type="number" id="radius" name="radius" value="15" min="15" max="30">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="layers">Layers</label>
+                <input type="number" id="layers" name="layers" value="1" min="1" max="3">
+            </td>
+        </tr>
+    </table>
+    <h4>Extras</h4>
+    <table>
+        <tr>
+            <td>
+                <label for="icing">Cream Cheese icing</label>
+            </td>
+            <td>
+                <input type="checkbox" name="icing" id="icing">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="topping">Fruit and Almonds topping</label>
+            </td>
+            <td>
+                <input type="checkbox" name="topping" id="topping">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="filling">Fruit jam filling between layers</label>
+            </td>
+            <td>
+                <input type="checkbox" name="filling" id="filling">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit Order" class="button" id="submit">
+    <input type="reset" class="button" id="reset">
+    <p id="total">Total: </p>
+    </div>
+</form>
+<div id="orderConfirmation">
+    <h3>Order Confirmation</h3>
+    <div id="orderConDetails">
+        <p id="orderConName"></p>
+        <p id="orderConAddress"></p>
+        <p id="orderConPost"></p>
+        <p id="orderConNum"></p>
+        <p id="orderConEmail"></p>
+    </div>
+    <h5>Your Order:</h5>
+    <div id="oderConTotals">
+        <p id="orderConCake"></p>
+        <p id="orderConIcing"></p>
+        <p id="orderConTopping"></p>
+        <p id="orderConFilling"></p>
+        <p id="orderConTotal"></p>
+    </div>
+</div>
 </body>
 </html>
