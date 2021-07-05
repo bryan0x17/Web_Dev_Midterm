@@ -15,21 +15,23 @@
         <div>Calgary, Alberta</div>
         <div>403-555-7625</div>
     </header>
+    <h3>Your Details</h3>
+    <form>
     <table id="information">
         <tr>
             <td>
-                <label for="first-name">First Name</label>
+                <label for="firstName">First Name</label>
             </td>
             <td>
-                <input type="text" name="first-name" id="first-name" pattern="[a-zA-Z- ]+" maxlength="25" required autofocus>
+                <input type="text" name="firstName" id="firstName" pattern="[a-zA-Z- ]+" maxlength="25" required autofocus>
             </td>
         </tr>
         <tr>
             <td>
-                <label for="last-name">Last Name</label>
+                <label for="lastName">Last Name</label>
             </td>
             <td>
-                <input type="text" name="last-name" id="last-name" pattern="[a-zA-Z- ]+" maxlength="25" required>
+                <input type="text" name="lastName" id="lastName" pattern="[a-zA-Z- ]+" maxlength="25" required>
             </td>
         </tr>
         <tr>
@@ -42,10 +44,10 @@
         </tr>
         <tr>
             <td>
-                <label for="post-code">Postal Code</label>
+                <label for="postCode">Postal Code</label>
             </td>
             <td>
-                <input type="text" name="post-code" id="post-code" pattern="[A-Z][0-9][A-Z] [A-Z][0-9][A-Z]" placeholder="A1A A1A" required>
+                <input type="text" name="postCode" id="postCode" pattern="[A-Z][0-9][A-Z] [A-Z][0-9][A-Z]" placeholder="A1A A1A" required>
             </td>
         </tr>
         <tr>
@@ -65,7 +67,7 @@
             </td>
         </tr>
     </table>
-    <h3>Cakes</h3>
+    <h3>Your Cake</h3>
     <table class="menuItems">
         <tr>
             <td>
@@ -128,12 +130,12 @@
             </td>
         </tr>
     </table>
+    <p id="total">Total: $18.00</p>
     <input type="submit" value="Submit Order" class="button" id="submit">
     <input type="reset" class="button" id="reset">
-    <p id="total">Total: </p>
     </div>
 </form>
-<div id="orderConfirmation">
+<div id="orderConfirmation" class="hidden">
     <h3>Order Confirmation</h3>
     <div id="orderConDetails">
         <p id="orderConName"></p>
